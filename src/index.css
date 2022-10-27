@@ -1,13 +1,176 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 600px;
+  margin-bottom: 6rem;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0.7rem;
+}
+
+/*
+======================
+      Quiz Title
+======================
+*/
+
+.quiz-title {
+  margin-top: 3rem;
+}
+
+.quiz-title h1 {
+  font-size: 2.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.quiz-title p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/*
+======================
+    Question Title
+======================
+*/
+
+.question-title {
+  color: #fff;
+  background-color: rgb(102, 27, 208);
+  height: 159px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 3rem 0;
+  font-size: 2.6rem;
+}
+
+/*
+============================
+    Questions Container
+============================
+*/
+
+.questions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/*
+============================
+        Question
+============================
+*/
+
+.question {
+  width: 286px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 0 0 1px;
+  transition: transform 150ms ease-in-out;
+}
+
+.question:hover {
+  transform: scale(1.05);
+}
+
+/*
+============================
+        Image Credit
+============================
+*/
+
+.credit {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 62%);
+  padding: 1rem;
+}
+
+.credit a:hover {
+  color: rgb(144, 88, 229);
+}
+
+/*
+============================
+       Selected Option
+============================
+*/
+
+.selected {
+  outline: 2px solid rgb(144, 88, 229);
+  outline-offset: 4px;
+}
+
+/*
+============================
+       Answer Block
+============================
+*/
+
+.answer-block {
+  background-color: rgb(144, 88, 229);
+  color: white;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 0 0 1px;
+}
+
+.answer-block h2 {
+  padding: 2rem 0;
+}
+
+.answer-block img {
+  height: 340px;
 }
