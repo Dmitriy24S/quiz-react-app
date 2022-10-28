@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@astrajs/collections": "^0.3.4",
+    "@astrajs/rest": "^0.3.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -22,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "netlify dev",
+    "start": "react-scripts start",
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.ts",
     "build": "react-scripts build",
@@ -45,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.0.11"
   }
 }

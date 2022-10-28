@@ -25,7 +25,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/quiz-item')
+        // const response = await fetch('http://localhost:8000/quiz-item')
+        // const response = await fetch(`{${process.env.REACT_APP_API_URL}:8000/quiz-item}`)
+        const response = await fetch('/.netlify/functions/getData')
+        console.log('fetch response', response)
+        // ! in server.ts:
+        // const quizItem: QuizData = await response.data.data['129a3064-1125-4d05-b4f3-43c1094c3013']
         const data = await response.json()
         console.log('fetch data:', data)
         // "answers": [
@@ -47,7 +52,18 @@ function App() {
         // "quizId": "345m834",
         // "subtitle": "This quiz is not cheesy or anything like that...",
         // "title": "What cheese are you?"
-        setQuiz(data)
+
+        // ! in server.ts:
+        // const quizItem: QuizData = await response.data.data['129a3064-1125-4d05-b4f3-43c1094c3013']
+        // ! netlify data.data['...']:
+        // fetch data:
+        // {status: 200, data: {…}}
+        // data: 129a3064-1125-4d05-b4f3-43c1094c3013
+        // : {answers: Array(67), content: Array(3), quizId: '345m834', subtitle: 'This quiz is not cheesy or anything like that...', title: 'What cheese are you?'}
+        // f8cab2c7-c504-4506-af6a-a63101f57c7f
+        // : {answers: Array(67), content: Array(3), quizId: '345m834', subtitle: 'This quiz is not cheesy or anything like that...', title: 'What cheese are you?'}
+        // status: 200
+        setQuiz(data.data['129a3064-1125-4d05-b4f3-43c1094c3013'])
       } catch (error) {
         console.log(error)
       }
