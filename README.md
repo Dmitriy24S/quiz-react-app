@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Quiz React App
+
+![Design preview for Quiz React App](./preview/design.png)
+
+Quiz React App. Created with React, CSS, Netlify & Astra Serverless DB.
+
+[Live Demo](https://luminous-granita-346f13.netlify.app/) 👈
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
